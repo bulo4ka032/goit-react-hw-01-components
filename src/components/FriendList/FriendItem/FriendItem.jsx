@@ -1,4 +1,5 @@
 import { FriendCard, Status, Name} from "./FriendItem.styled";
+import PropTypes from 'prop-types';
 
 export const FriendItem = ({ avatar, name, status }) => {
   return (<FriendCard>
@@ -8,4 +9,8 @@ export const FriendItem = ({ avatar, name, status }) => {
   </FriendCard>);
 };
 
-console.log(FriendItem);
+FriendItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  status: PropTypes.bool,
+}
